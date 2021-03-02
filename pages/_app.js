@@ -1,6 +1,8 @@
-import "../css/index.css";
-import Head from "next/head";
-import Layout from "@components/layout";
+import '../css/index.css';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import Head from 'next/head';
+import Layout from '@components/layout';
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -8,8 +10,8 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <title>Next.js Starter Tailwind</title>
         <meta
-          name="Description"
-          content="A Next.js starter styled using Tailwind CSS."
+          name='Description'
+          content='A Next.js starter styled using Tailwind CSS.'
         />
       </Head>
 

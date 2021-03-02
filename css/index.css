@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.hero-image-wrapper {
+  height: 75vh;
+  @apply relative;
+}
+
+.slick-slider {
+  width: 97vw;
+  max-width: 1280px;
+}
+
+#hero-slider > div > ul {
+  bottom: 20px;
+  text-align: right;
+}
+.hero-description {
+  top: 20%;
+  bottom: 20%;
+  @apply hidden sm:inline-block absolute z-20  w-72 py-10 px-8  bg-gray-100;
+}
