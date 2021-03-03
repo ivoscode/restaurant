@@ -10,40 +10,62 @@ export default function Header() {
     <header className='bg-white w-full'>
       <div className='flex flex-wrap items-center justify-between lg:container px-4 py-6 mx-auto md:flex-no-wrap md:px-6'>
         <div className='flex items-center'>
-          <Image
-            src='/tailwind-logo.svg'
-            width={40}
-            height={40}
-            priority
-            alt='Tailwind CSS logo'
-          />
-
           <Link href='/'>
-            <a className='text-lg md:text-xl font-bold ml-3 text-black'>
-              Next.js Starter Tailwind
+            <a>
+              <Image
+                src='/images/logo.png'
+                width={60}
+                height={60}
+                priority
+                alt='logo'
+              />
             </a>
           </Link>
         </div>
 
-        <button
-          className='flex items-center block px-3 py-2 text-white border border-white rounded md:hidden'
+        <div
+          className='flex cursor-pointer items-center  px-3 py-2  text-gray-300 '
           onClick={() => setMobileMenuIsOpen(!mobileMenuIsOpen)}
         >
-          <svg
-            className='w-3 h-3 fill-current'
-            viewBox='0 0 20 20'
-            xmlns='http://www.w3.org/2000/svg'
-          >
-            <title>Menu</title>
-            <path d='M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z' />
+          <svg viewBox='0 0 100 80' width='40' height='40'>
+            <rect width='100' height='5' rx='8'></rect>
+            <rect y='30' width='100' height='5' rx='8'></rect>
+            <rect y='60' width='100' height='5' rx='8'></rect>
           </svg>
-        </button>
-
+        </div>
+        <aside
+          className={`transform top-10 right-0 w-64 bg-gray-200 fixed h-96 overflow-auto ease-in-out transition-all duration-300 z-30
+     ${mobileMenuIsOpen ? 'translate-x-0' : 'translate-x-full'}`}
+        >
+          <div className='flex pr-2 justify-end'>
+            <button
+              onClick={() => setMobileMenuIsOpen(!mobileMenuIsOpen)}
+              className='p-2 text-white text-xl font-bold'
+            >
+              &#9747;
+            </button>
+          </div>
+          <div>
+            <ul
+              className={`  items-center justify-center text-sm w-full 
+         `}
+            >
+              {[
+                { title: 'Home', route: '/' },
+                { title: 'About', route: '/about' },
+              ].map(({ route, title }) => (
+                <li className='mt-3 md:mt-0 md:ml-6' key={title}>
+                  <Link href={route}>
+                    <a className='block text-black'>{title}</a>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </aside>
         <ul
-          className={cn(
-            'md:flex flex-col md:flex-row md:items-center md:justify-center text-sm w-full md:w-auto',
-            mobileMenuIsOpen ? `block` : `hidden`
-          )}
+          className={`  items-center justify-center text-sm w-full hidden
+         `}
         >
           {[
             { title: 'Home', route: '/' },

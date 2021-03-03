@@ -3,13 +3,9 @@ import Footer from './footer';
 
 export default function Layout(props) {
   return (
-    <div className='flex flex-col items-center justify-center min-h-screen  '>
+    <div className='flex flex-col items-center overflow-hidden w-full'>
       <Header />
-
-      <main className='flex-1 flex flex-col items-center justify-center  max-w-7xl '>
-        {props.children}
-      </main>
-
+      <main className='max-w-7xl '>{props.children}</main>
       <Footer />
     </div>
   );

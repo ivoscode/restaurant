@@ -8,7 +8,7 @@ const HeroSlider = () => {
     infinite: true,
     speed: 1200,
     autoplay: true,
-    autoplaySpeed: 6000,
+    autoplaySpeed: 4000,
     fade: true,
     cssEase: 'linear',
     arrows: false,
@@ -23,7 +23,7 @@ const HeroSlider = () => {
     },
     {
       id: 2,
-      imgsrc: '/images/corporate-events.jpg',
+      imgsrc: '/images/corporate-events.jpeg',
       title: 'Corporate Events',
       description:
         'Whether you are looking for an intimate dining event in a beautiful gallery or a large-scale extravaganza in a unique venue we can help.',
@@ -45,11 +45,27 @@ const HeroSlider = () => {
   ];
 
   return (
-    <div className=' bg-blue-500  ' id='hero-slider'>
+    <div id='hero-slider'>
       <Slider {...settings}>
         {data.map((data) => {
           return (
             <div className='relative' key={data.id}>
+              <div className=' hero-description'>
+                <div className='flex flex-col justify-center h-full'>
+                  <div className='bg-gray-200 p-7 '>
+                    <h1 className='mb-5 text-3xl'> {data.title}</h1>
+                    <p className='text-lg'>{data.description}</p>
+                    <div className='mt-10 text-center'>
+                      <Image
+                        src='/images/right-arrow.svg'
+                        alt='arrow'
+                        width={30}
+                        height={30}
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
               <div className='hero-image-wrapper'>
                 <Image
                   src={data.imgsrc}
@@ -58,18 +74,6 @@ const HeroSlider = () => {
                   objectFit='cover'
                   objectPosition='center center'
                 />
-              </div>
-              <div className=' hero-description'>
-                <div className='flex flex-col justify-center h-full'>
-                  <h1 className='mb-5 text-3xl'> {data.title}</h1>
-                  <p className='text-lg'>{data.description}</p>
-                  <Image
-                    src='/images/right-arrow.svg'
-                    alt='arrow'
-                    width={30}
-                    height={30}
-                  />
-                </div>
               </div>
             </div>
           );
