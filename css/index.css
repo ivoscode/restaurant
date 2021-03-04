@@ -2,20 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ==============Header============ */
+@media screen and (min-width: 640px) {
+  #logo > a > div > img {
+    visibility: hidden !important;
+  }
+}
+
 /*============= Hero slider=========== */
 .hero-image-wrapper {
   height: 50vh;
   @apply relative;
 }
-@media screen and (min-width: 640px) {
-  .hero-image-wrapper {
-    height: 75vh;
-  }
-}
+
 #hero-slider {
-  width: 100vw;
+  width: 97vw;
   max-width: 1280px;
   position: relative;
+  @apply mt-24;
 }
 .slick-list {
   overflow: visible !important;
@@ -24,6 +28,7 @@
   bottom: 20px !important;
   text-align: right !important;
   padding-right: 3rem !important;
+  visibility: hidden;
 }
 .hero-description {
   @apply top-40  -bottom-40 w-80  sm:inline-block absolute z-40 sm:w-80  sm:top-0 sm:bottom-0;
@@ -35,4 +40,12 @@
 }
 .slick-dots li.slick-active button:before {
   color: rgb(250, 56, 176) !important;
+}
+@media screen and (min-width: 640px) {
+  .hero-image-wrapper {
+    height: 75vh;
+  }
+  .slick-dots {
+    visibility: visible;
+  }
 }
