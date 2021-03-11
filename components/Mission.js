@@ -1,9 +1,8 @@
 import React from 'react';
-import Image from 'next/image';
 
 const Mission = () => {
   return (
-    <div className='bg-gray-500 my-52 sm:my-24 py-10 px-5 text-xl w-full text-white text-center'>
+    <div className='mission mt-52 mb-12 sm:-mt-2 py-24 px-5 text-xl w-full text-white text-center'>
       <p>
         Our mission is to be the most sustainable restaurant in Derby <br />
         by sourcing our ingredients locally, supplementing produce with herbs
@@ -12,9 +11,6 @@ const Mission = () => {
         <br />
         urban farming education.
       </p>
-      <div className='mt-8'>
-        <Image src='/images/logo.png' alt='arrow' width={60} height={60} />
-      </div>
     </div>
   );
 };

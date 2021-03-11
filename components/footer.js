@@ -1,30 +1,30 @@
+import Image from 'next/image';
+
 export default function Footer() {
   return (
-    <footer className='bg-blue-600 w-full'>
-      <ul className='flex items-center justify-between lg:container px-4 py-6 mx-auto text-sm text-white md:px-6'>
-        <li>
-          Created by{' '}
-          <a
-            href='https://taylorbrynat.dev'
-            target='_blank'
-            rel='noopener noreferrer'
-            className='font-bold'
-          >
-            Taylor Bryant
+    <footer className=' w-full flex'>
+      <ul className=' items-center  w-1/2 md:w-1/3 flex h-28 '>
+        <li className='ml-5'>
+          <a className='cursor-pointer'>
+            <Image src='/images/instagram.svg' height={30} width={30} />
           </a>
         </li>
-
-        <li>
-          <a
-            href='https://github.com/oddstronaut/next-starter-tailwind'
-            target='_blank'
-            rel='noopener noreferrer'
-            className='font-bold'
-          >
-            GitHub
+        <li className='ml-5'>
+          <a className='cursor-pointer'>
+            <Image src='/images/twiter.svg' height={30} width={30} />
+          </a>
+        </li>
+        <li className='ml-5'>
+          <a className='cursor-pointer'>
+            <Image src='/images/facebook.svg' height={30} width={30} />
           </a>
         </li>
       </ul>
+      <div className='flex justify-end items-center w-full text-gray-900'>
+        <span className=' inline-block mr-10'>
+          ©2021&nbsp; Delicieux, Derby
+        </span>
+      </div>
     </footer>
   );
 }

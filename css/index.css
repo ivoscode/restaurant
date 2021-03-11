@@ -43,9 +43,18 @@
 }
 @media screen and (min-width: 640px) {
   .hero-image-wrapper {
-    height: 75vh;
+    height: 65vh;
   }
   .slick-dots {
     visibility: visible;
   }
+}
+/* ==========Mission========== */
+.mission {
+  background-color: #091321;
+}
+/* ==========cafe-bar============== */
+.cafe h1 {
+  color: #00244c;
+  font-weight: bolder;
 }
