@@ -6,7 +6,7 @@ export default function Header() {
   const [mobileMenuIsOpen, setMobileMenuIsOpen] = useState(false);
 
   return (
-    <header className='bg-white  w-full fixed top-0 z-50'>
+    <header className='bg-white  w-full max-w-7xl fixed top-0 z-50'>
       <div className='flex flex-wrap items-center justify-between  px-4 py-4  mx-auto md:flex-no-wrap md:px-6'>
         {/*=============Logo==================*/}
         <div id='logo' className='flex items-center  '>

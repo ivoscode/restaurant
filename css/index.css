@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+#__next {
+  @apply flex justify-center;
+}
 /* ==============Header============ */
 @media screen and (min-width: 640px) {
   #logo > a > div > img {
@@ -16,7 +19,7 @@
 }
 
 #hero-slider {
-  width: 97vw;
+  width: 100vw;
   max-width: 1280px;
   position: relative;
   @apply mt-24;
@@ -57,4 +60,13 @@
 .cafe h1 {
   color: #00244c;
   font-weight: bolder;
+}
+/* ===========contact and form=========== */
+#contact {
+  background-color: #091321;
+  @apply mt-20;
+}
+.form-fields {
+  background-color: #091321;
+  @apply w-full px-3 py-2 text-white placeholder-white border-b border-gray-400  focus:outline-none;
 }

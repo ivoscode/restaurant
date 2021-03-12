@@ -4,7 +4,7 @@ import Footer from './footer';
 
 export default function Layout(props) {
   return (
-    <div className='flex flex-col items-center overflow-hidden w-full'>
+    <div className='flex flex-col items-center  overflow-hidden max-w-7xl'>
       <Head>
         <title>Delicieux</title>
         <meta name='Description' content='Restaurant in Derby.' />
@@ -32,7 +32,7 @@ export default function Layout(props) {
         <meta name='theme-color' content='#ffffff' />
       </Head>
       <Header />
-      <main className='max-w-7xl '>{props.children}</main>
+      <main className=' flex flex-col justify-center '>{props.children}</main>
       <Footer />
     </div>
   );
