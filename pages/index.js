@@ -2,7 +2,7 @@ import Awards from '@components/awards';
 import CafeBar from '@components/cafe-bar';
 import Contact from '@components/contact';
 import HeroSlider from '@components/hero-slider';
-import Mission from '@components/mission';
+import Mission from '@components/mission-statement';
 
 export default function IndexPage() {
   return (
