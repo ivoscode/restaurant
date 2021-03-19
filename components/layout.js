@@ -1,10 +1,10 @@
 import Head from 'next/head';
-import Header from './header';
 import Footer from './footer';
+import Header from './header';
 
 export default function Layout(props) {
   return (
-    <div className='flex flex-col items-center  overflow-hidden max-w-7xl'>
+    <div className='flex flex-col items-center  overflow-hidden max-w-8xl'>
       <Head>
         <title>Delicieux</title>
         <meta name='Description' content='Restaurant in Derby.' />

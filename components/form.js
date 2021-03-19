@@ -2,48 +2,50 @@ import React from 'react';
 
 const Form = () => {
   return (
-    <form>
+    <div className=' w-full play '> 
+     <form className=' '>
+    <h1 className=' text-blue-400 text-xl mb-6'>Stay In The Know</h1>
       <div className='mb-6'>
         <input
           type='text'
           name='name'
           id='name'
-          placeholder='Full name'
+          placeholder='Your Name'
           required
-          className=' form-fields '
+          className=' form-fields  '
         />
       </div>
-      <div class='mb-6'>
+      <div className='mb-10'>
         <input
           type='email'
           name='email'
           id='email'
-          placeholder='Email'
+          placeholder='Your Email Address'
           required
           className='form-fields'
         />
       </div>
-
-      <div className='mb-6'>
-        <textarea
-          rows='1'
-          name='message'
-          id='message'
-          placeholder='Your Message'
-          className='  form-fields'
-          required
-        ></textarea>
-      </div>
-      <div className='mb-6'>
+      <div className='mont mb-6 text-xs'>
+        <label className=" inline-flex items-center">
+          <input type="checkbox" className=""/>
+            <span className="ml-2">I have read and agree to the <a href="">Privacy Policy</a>.</span>
+      </label>
+        <label className=" inline-flex items-center mt-1">
+          <input type="checkbox" className="" />
+          <span className="ml-2">Yes, I would like to receive emails with exclusive specials and offers.</span>
+        </label>
+    </div>
+      
+      <div className=''>
         <button
           type='submit'
-          class='w-full px-3 py-4 text-white bg-indigo-500 rounded-md focus:bg-indigo-600 focus:outline-none'
+          className='mont w-full py-4 tracking-widest text-white bg-gray-900  border border-gray-400'
         >
-          Send Message
+          SUBSCRIBE
         </button>
       </div>
-      <p className='text-base text-center text-gray-400' id='result'></p>
-    </form>
+     
+    </form></div>
   );
 };
 
